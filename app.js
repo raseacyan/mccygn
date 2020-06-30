@@ -591,6 +591,8 @@ const handleMessage = (sender_psid, received_message) => {
         case "hi":
           greeting(sender_psid);
           break;
+        case "hello":        
+          helloGreeting(sender_psid);
         case "text":
           textReply(sender_psid);
           break;
@@ -972,6 +974,11 @@ const greeting =(sender_psid) => {
   callSend(sender_psid, response);
 }
 
+
+const helloGreeting =(sender_psid) => {
+  let response = {"text": "Hello Yangan Campus"};
+  callSend(sender_psid, response);
+}
 
 
 const textReply =(sender_psid) => {

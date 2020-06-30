@@ -593,6 +593,7 @@ const handleMessage = (sender_psid, received_message) => {
           break;
         case "hello":        
           helloGreeting(sender_psid);
+          break;
         case "text":
           textReply(sender_psid);
           break;
